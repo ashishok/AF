@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+body
+{
+    font-family:  Arial, Helvetica, sans-serif;
+    background-color: rgb(129, 123, 123);
+     /* font-family: "Arial Rounded MT Bold";   */
+}
+*{
+    margin: 0;   
+    padding: 0;  
+    list-style: none;
+    text-decoration: none ;
+    box-sizing: none;
+}
+nav{
+    background-color: rgba(190, 26, 48, 0.87);
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+
+}
+
+label.one
+{
+    color :white ;
+    font-size: 40px;
+    line-height: 70px;  /* gaps between two lines */
+    padding: 0 90px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+
+}
+nav ul
+{
+    float: right;
+    margin-right: 30px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin : 0 10px;
+}
+nav ul li  a{
+     color: white;
+     font-size: 15px;
+     text-transform: uppercase;
+     border-radius: 3px;
+     padding: 7px 13px;
+     font-weight: bolder;
+}
+a.two, a:hover{
+background: rgb(129, 123, 123);
+transition: .3s;
+}
+.checkbtn
+{
+    font-size: 30px;
+    color: rgb(214, 29, 29);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+@media(max-width:850px)
+{
+    label.one{
+        font-size: 30px;
+        padding-left:50px;
+        /* z-index: 1; */
+    }
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+}
+@media  (max-width:850px){
+.checkbtn
+{
+    display:block;
+    /* z-index: 1; */
+
+}
+ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(173, 173, 190);
+    top: 80px;
+    left:-100%;
+    text-align: center;
+    transition:all.5s ;
+}
+nav ul li
+{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a 
+{
+    font-size: 20px;
+}
+a:hover, a.two
+{
+    background : none;
+    color: yellow;
+}
+}
+#check:checked ~ ul{
+    left: 0;
+
+} 
+footer
+{
+    height: 3vh ;
+    position: absolute;
+    background-color: rgba(190, 26, 48, 0.87);
+    width: 100%;
+    color: white;
+    bottom: 0px;
+}
+footer h5
+{
+    /* position: absolute; */
+    /* left: 41%; */
+    font-weight:lighter ;
+    text-align: center;
+    padding-top: 3px;
+    
+}
+.four
+{
+    color: rgb(255, 255, 244);
+}
+.three
+{
+    color: rgb(129, 123, 123);
+}
+ 
+.five
+{
+    position: absolute;
+    top: -154%;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(1.5);
+    width: 580px;
+    height: 350px;
+    background-color: yellow;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    overflow:auto;
+    opacity: 0;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}           
+.five.active{
+    top:54%;
+    transform: translate(-50%,-50%)scale(1.5);
+    opacity: 1;
+    transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms; 
+
+}
+
+.five .closebtn
+ {
+    position: absolute;
+    top:8px;
+    right:9px;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    line-height: 19px;
+    cursor: pointer;
+}
+
+.closebtn a
+{
+    color: black;
+    transition: 555s;
+}
+/* #non a:hover{ */
+/* background-color: rgb(153, 52, 52); */
+/* } */
+
+.closebtn:hover
+{
+    background-color: rgb(56, 58, 180);
+}
+
+.five .search
+{
+     position: absolute;
+     top: 10.5%;
+     right: 6px;
+     width: 97.5%;
+     height: 6%;
+     border-radius: 5px;
+     border: 1px solid  ;
+     text-align: center;
+ }
+ .list table
+ {
+     background-color: black;
+
+ }
+
+.list tr{
+     position: relative;
+     top: 70px;
+    }
+    
+.list  tr th{
+
+     font-size: 20px;
+     width: 300px;
+     height: 45px;     
+     background-color: brown;
+ } 
+    
+ 
+.list tr td{
+    height: 27px;
+    background-color: aqua;
+    text-align: center;
+    cursor: pointer;
+} 
+
+.list tr td a{
+    width: 100px;
+    font-size: 12px;
+    color: green;
+    font-weight: bolder;
+    /* background-color:none; */
+    /* cursor: pointer; */
+     
+}
+.list a:hover
+{
+    background-color:none;
+    transition: 555s;
+}
+.list td:hover{
+    background-color: white;
+}
+
+

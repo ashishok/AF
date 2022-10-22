@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="z_dummy.css">
+    <link rel="stylesheet" href="home.js">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <title>Ashish Footwear</title>
+</head>
+
+<body>
+
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <span id="btn"> &#9776; </span>
+        </label>
+        <label class="one">
+            <font class="four">Ashish</font>
+            <font class="three">Footwear</font>
+        </label>
+        <ul>
+            <li>
+            <li> <a class="two" href="#">Home</a></li>
+            <li> <a href="#" id="vend">Vendors</a></li>
+            <li> <a href="#">contact</a></li>
+            <li> <a href="#">Help</a></li>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <div class="five" id="myModal">
+        <div class="closebtn "><a href="#">&times;</a></div>
+        <input class="search" type="text" placeholder="Search for Names.." id="input" onkeyup="myFunction()">
+        <table class="list" id="myUL">
+            <tr>
+                <th>Serial</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">1.</td>
+                <td><a href="#">AF</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">2.</td>
+                <td><a href="#">Azim</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">3.</td>
+                <td><a href="#">Ubed</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">4.</td>
+                <td><a href="#">Tushant</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">5.</td>
+                <td><a href="#">Sunny</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">6.</td>
+                <td><a href="#">Pandit Ji</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">7.</td>
+                <td><a href="#">Ashok Ji</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">8.</td>
+                <td><a href="#">Ram Kali</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">9.</td>
+                <td><a href="#">Naveen</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">10.</td>
+                <td><a href="#">Ram Kumar</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">11.</td>
+                <td><a href="#">Rashid</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">12.</td>
+                <td><a href="#">Pravez</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">13.</td>
+                <td><a href="#">Neeraj</a></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">14.</td>
+                <td><a href="#">abc</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <footer>
+        <h5>&copy; copyright Ashish Footwear 2022</h5>
+    </footer>
+
+
+
+
+    
+    <script>
+
+
+        document.querySelector("#vend").addEventListener("click", function () {
+            document.querySelector(".five").classList.add("active");
+        });
+        document.querySelector(".closebtn").addEventListener("click", function () {
+            document.querySelector(".five").classList.remove("active");
+        });
+
+
+
+
+        function myFunction() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("input");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myUL");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

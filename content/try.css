@@ -1,0 +1,17 @@
+body
+{
+    background-color: rgb(146, 208, 212);
+}
+p
+{
+    background-color: rgb(161, 4, 4);
+    padding-bottom: 10vh;
+    margin-top: 10vh;
+    /* position:fixed; */
+    /* overflow: hidden; */
+    /* z-index: 1px; */
+}
+.col
+{
+    background-color: black;
+}
